@@ -34,4 +34,5 @@ class WebController extends Controller
         $product=Product::all();
         return view('home',['product'=>$product]);
     }
+
 }

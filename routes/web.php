@@ -32,3 +32,4 @@ use Illuminate\Support\Facades\Route;
 //Route::get("/danh-sach","WebController@listStudent");
 Route::get("/","WebController@home");
 
+

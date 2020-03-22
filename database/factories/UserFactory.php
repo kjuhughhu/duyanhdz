@@ -36,3 +36,16 @@ $factory->define(\App\Brand::class,function (Faker $faker){
         'brand_name' => $faker->unique()->name
     ];
 });
+$factory->define(\App\Product::class,function (Faker $faker){
+    return [
+        'product_name' => $faker->unique()->name,
+        'product_desc' => $faker->title,
+        'thumbnail' => $faker->imageUrl(),
+        'gallery' => $faker->imageUrl().",".$faker->imageUrl(),
+        'price'=> random_int(1,10),
+        'quantity'=> random_int(1,10),
+        'category_id'=> random_int(1,10),
+        'brand_id'=>random_int(1,10),
+    ];
+});
+

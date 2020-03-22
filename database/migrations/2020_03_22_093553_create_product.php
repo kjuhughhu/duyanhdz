@@ -22,7 +22,7 @@ class CreateProduct extends Migration
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('brand_id');
             $table->decimal('price',12,4); // 16,0 la
-            $table->unsignedBigInteger('quantity')->default(1);
+            $table->unsignedInteger('quantity')->default(1);
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('category');
