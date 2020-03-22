@@ -13,22 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 //Route::METHOD(path_string,HANDLE_FUNCTION);
 // METHOD : post get put delete ....  CRUD : edit du lieu
-Route::get("/xin-chao",function (){
-        echo "chao tat ca moi nguoi";
-    }
-);
-/* Lưu ý
- * chạy url trên trình duyệt -> method GET
- */
-Route::get("/danh-sach-lop-hoc",function (){
-    $arr = [];
-});
-
-Route::get("/danh-sach","WebController@listStudent");
-Route::get("/home","WebController@home");
+//Route::get("/xin-chao",function (){
+//        echo "chao tat ca moi nguoi";
+//    }
+//);
+///* Lưu ý
+// * chạy url trên trình duyệt -> method GET
+// */
+//Route::get("/danh-sach-lop-hoc",function (){
+//    $arr = [];
+//});
+//
+//Route::get("/danh-sach","WebController@listStudent");
+Route::get("home","WebController@home");
 
