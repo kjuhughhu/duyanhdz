@@ -125,71 +125,21 @@
             </div>
             <div class="row mb-5">
               <div class="products-wrap border-top-0">
+
   <div class="container-fluid">
     <div class="row no-gutters products">
+        @foreach(\App\Product::all() as $p)
       <div class="col-6 col-md-6 col-lg-6 border-top">
         <a href="{{url('/shop_single')}}" class="item">
           <img src="{{asset('images/product_1.jpg')}}" alt="Image" class="img-fluid">
           <div class="item-info">
-            <h3>The Shoe</h3>
+            <h3>{{$p->product_name}}</h3>
             <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50</strong>
+            <strong class="price">{{$p->price}}</strong>
           </div>
         </a>
       </div>
-      <div class="col-6 col-md-6 col-lg-6 border-top">
-        <a href="{{url('/shop_single')}}" class="item">
-          <span class="tag">Sale</span>
-          <img src="{{asset('images/product_2.jpg')}}" alt="Image" class="img-fluid">
-          <div class="item-info">
-            <h3>Marc Jacobs Bag</h3>
-            <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50 <del>$30.00</del></strong>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-6 col-lg-6">
-        <a href="{{url('/shop_single')}}" class="item">
-          <img src="{{asset('images/product_3.jpg')}}" alt="Image" class="img-fluid">
-          <div class="item-info">
-            <h3>The  Belt</h3>
-            <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50</strong>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-6 col-md-6 col-lg-6">
-        <a href="" class="item">
-          <img src="{{asset('images/product_1.jpg')}}" alt="Image" class="img-fluid">
-          <div class="item-info">
-            <h3>The Shoe</h3>
-            <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50</strong>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-6 col-lg-6">
-        <a href="{{url('/shop_single')}}" class="item">
-          <span class="tag">Sale</span>
-          <img src="{{asset('images/product_2.jpg')}}" alt="Image" class="img-fluid">
-          <div class="item-info">
-            <h3>Marc Jacobs Bag</h3>
-            <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50 <del>$30.00</del></strong>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-6 col-lg-6">
-        <a href="{{url('/shop_single')}}" class="item">
-          <img src="{{asset('images/product_3.jpg')}}" alt="Image" class="img-fluid">
-          <div class="item-info">
-            <h3>The  Belt</h3>
-            <span class="collection d-block">Summer Collection</span>
-            <strong class="price">$9.50</strong>
-          </div>
-        </a>
-      </div>
+        @endforeach
 
     </div>
   </div>
@@ -303,9 +253,9 @@
             <div class="block-5 mb-5">
               <h3 class="footer-heading mb-4">Contact Info</h3>
               <ul class="list-unstyled">
-                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
-                <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-                <li class="email">emailaddress@domain.com</li>
+                  <li class="address">Hà Đông</li>
+                  <li class="phone"><a href="tel://+84932223796">+84932223796</a></li>
+                  <li class="email">duyyanhh@gmail.com</li>
               </ul>
             </div>
 
