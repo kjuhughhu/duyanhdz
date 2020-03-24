@@ -67,7 +67,7 @@ return [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
             'host' => "ec2-52-73-247-67.compute-1.amazonaws.com",//env('DB_HOST', '127.0.0.1'),
-            'port' => 5432,//env('DB_PORT', '5432'),
+            'port' => '5432',//env('DB_PORT', '5432'),
             'database' => "dbnht1n6g4dcma",//env('DB_DATABASE', 'forge'),
             'username' => "yeoxqdpvkvdtop",//env('DB_USERNAME', 'forge'),
             'password' => "1c2a56dc4d979bbf17bdd3dad7e374c37983a61a02cd2aa3aecd2a5bc92160f2",//env('DB_PASSWORD', ''),
