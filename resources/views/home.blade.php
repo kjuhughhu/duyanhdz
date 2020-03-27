@@ -1,61 +1,67 @@
 @extends('layout')
 
-@section('content')
-
-    <div class="products-wrap border-top-0">
-        <div class="container-fluid">
-            <h2 class="text-center">Sản phẩm mới nhất</h2>
-            <div class="row no-gutters products">
-                @foreach($newests as $p)
-                <div class="col-6 col-md-6 col-lg-4">
-                    <a href="#" class="item">
-                        <img src="{{asset('images/product_1.jpg')}}" alt="Image" class="img-fluid">
-                        <div class="item-info">
-                            <h3>{{$p->product_name}}</h3>
-                            <span class="collection d-block">Summer Collection</span>
-                            <strong class="price">{{$p->price}}</strong>
-                        </div>
-                    </a>
+@section('product')
+    <div class="container">
+        <div class="featured-hero-product w-100 row align-items-center">
+            <h1 class="text-center text-black" >Brand New</h1>
+        </div>
+    <div class="row no-gutters products">
+        @foreach($newests as $p)
+        <div class="col-6 col-md-6 col-lg-4">
+            <a href="#" class="item">
+                <a href="{{url("/product/{$p->id}")}}">
+                    <img src="{{asset('images/product_1.jpg')}}" alt="Image" class="img-fluid">
+                </a>
+                <div class="item-info">
+                    <h3>{{$p->product_name}}</h3>
+                    <span class="collection d-block">{{$p->product_desc}}</span>
+                    <strong class="price">{{$p->price}}</strong>
                 </div>
-                @endforeach
-            </div>
+            </a>
         </div>
-        <div class="container-fluid">
-            <h2 class="text-center">Sản phẩm đắt nhất</h2>
-            <div class="row no-gutters products">
-                @foreach($max_price as $a)
-                    <div class="col-6 col-md-6 col-lg-4">
-                        <a href="#" class="item">
-                            <img src="{{asset('images/product_1.jpg')}}" alt="Image" class="img-fluid">
-                            <div class="item-info">
-                                <h3>{{$a->product_name}}</h3>
-                                <span class="collection d-block">Summer Collection</span>
-                                <strong class="price">{{$a->price}}</strong>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-        <div class="container-fluid">
-            <h2 class="text-center">Sản phẩm rẻ nhất</h2>
-            <div class="row no-gutters products">
-                @foreach($min_price as $b)
-                    <div class="col-6 col-md-6 col-lg-4">
-                        <a href="#" class="item">
-                            <img src="{{asset('images/product_1.jpg')}}" alt="Image" class="img-fluid">
-                            <div class="item-info">
-                                <h3>{{$b->product_name}}</h3>
-                                <span class="collection d-block">Summer Collection</span>
-                                <strong class="price">{{$b->price}}</strong>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
+        @endforeach
     </div>
-
-@endsection
-
+    </div>
+    <div class="container">
+        <div class="featured-hero-product w-100 row align-items-center">
+            <h1 class="text-center text-black" >Authentic</h1>
+        </div>
+    <div class="row no-gutters products">
+        @foreach($max_price as $p)
+        <div class="col-6 col-md-6 col-lg-4">
+            <a href="#" class="item">
+                <a href="{{url("/product/{$p->id}")}}">
+                    <img src="images/product_1.jpg" alt="Image" class="img-fluid">
+                </a>
+                <div class="item-info">
+                    <h3>{{$p->product_name}}</h3>
+                    <span class="collection d-block">{{$p->product_desc}}</span>
+                    <strong class="price">{{$p->price}}</strong>
+                </div>
+            </a>
+        </div>
+        @endforeach
+    </div>
+    </div>
+    <div class="container">
+        <div class="featured-hero-product w-100 row align-items-center">
+            <h1 class="text-center text-black" >Second 2</h1>
+        </div>
+    <div class="row no-gutters products">
+        @foreach($min_price as $p)
+        <div class="col-6 col-md-6 col-lg-4">
+            <a href="#" class="item">
+                <a href="{{url("/product/{$p->id}")}}">
+                    <img src="{{asset('images/product_1.jpg')}}" alt="Image" class="img-fluid">
+                </a>
+                <div class="item-info">
+                    <h3>{{$p->product_name}}</h3>
+                    <span class="collection d-block">{{$p->product_desc}}</span>
+                    <strong class="price">{{$p->price}}</strong>
+                </div>
+            </a>
+        </div>
+        @endforeach
+    </div>
+    </div>
+    @endsection

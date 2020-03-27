@@ -1,37 +1,28 @@
 <?php
+//Route::prefix("admin")->group (function (){
+//    include_one("admin.php");
+//});
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-//Route::METHOD(path_string,HANDLE_FUNCTION);
-// METHOD : post get put delete ....  CRUD : edit du lieu
-//Route::get("/xin-chao",function (){
-//        echo "chao tat ca moi nguoi";
-//    }
-//);
-///* Lưu ý
-// * chạy url trên trình duyệt -> method GET
-// */
-//Route::get("/danh-sach-lop-hoc",function (){
-//    $arr = [];
-//});
-//
-//Route::get("/danh-sach","WebController@listStudent");
+Route::get('/', function () {
+    return view('welcome');
+});
+//day la phan dang nhap
+Route::get("dang-nhap","WebController@login");
+
+//day la trang chu
 Route::get("/","WebController@home");
-Route::get('/shop',"WebController@shop");
-Route::get('/shop_single',"WebController@shop_single");
+
+//day la trang san pham
+Route::get("/product/{id}","WebController@product");
+
+//Day la danh sach san pham
 
 
+Route::get("/listproduct","WebController@listproduct");
+//Day la trang san pham theo danh muc cate
+Route::get("/cate/{id}","WebController@categorypr");
+//Day la trang san pham theo danh muc brand
+Route::get("/brandpr/{id}","WebController@brands");
